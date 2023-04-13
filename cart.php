@@ -44,33 +44,13 @@ if (isset($_SESSION['InfoProduct']) && count($_SESSION['InfoProduct']) != 0) {
     <!-- Mirrored from new.axilthemes.com/demo/template/etrade/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Oct 2022 22:16:35 GMT -->
 
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title><?php echo APP_NAME; ?></title>
-        <meta name="robots" content="noindex, follow" />
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+        
 
         <!-- CSS
     ============================================ -->
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
-        <link rel="stylesheet" href="assets/css/vendor/flaticon/flaticon.css">
-        <link rel="stylesheet" href="assets/css/vendor/slick.css">
-        <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-        <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
-        <link rel="stylesheet" href="assets/css/vendor/sal.css">
-        <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/vendor/base.css">
-        <link rel="stylesheet" href="assets/css/style.min.css">
-        <link rel="stylesheet" href="backoffice/css/swal.css">
-        <link rel="stylesheet" href="assets/css/toastr.min.css">
-        <script src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="backoffice/js/swal2.min.js"></script>
+   <?php include("link.php") ; ?>
         <script type="text/javascript" src="assets/js/toastr.min.js"></script>
         <script type="text/javascript" src="assets/js/toast.js"></script>
     </head>
@@ -283,24 +263,7 @@ if (isset($_SESSION['InfoProduct']) && count($_SESSION['InfoProduct']) != 0) {
         <!-- JS
 ============================================ -->
         <!-- Modernizer JS -->
-        <script src="assets/js/vendor/modernizr.min.js"></script>
-        <!-- jQuery JS -->
-        <script src="assets/js/vendor/jquery.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="assets/js/vendor/popper.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-        <script src="assets/js/vendor/slick.min.js"></script>
-        <script src="assets/js/vendor/js.cookie.js"></script>
-        <!-- <script src="assets/js/vendor/jquery.style.switcher.js"></script> -->
-        <script src="assets/js/vendor/jquery-ui.min.js"></script>
-        <script src="assets/js/vendor/jquery.countdown.min.js"></script>
-        <script src="assets/js/vendor/sal.js"></script>
-        <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
-        <script src="assets/js/vendor/counterup.js"></script>
-        <script src="assets/js/vendor/waypoints.min.js"></script>
-
+        <?php include("script.php"); ?>
         <!-- Main JS -->
 
         <script src="assets/js/main.js"></script>
