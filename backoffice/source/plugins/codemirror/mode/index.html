@@ -1,0 +1,165 @@
+<!doctype html>
+
+<title>CodeMirror: Language Modes</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../doc/docs.css">
+
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="..<?php echo PATH ?>">Home</a>
+    <li><a href="../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a class=active href="#">Language modes</a>
+  </ul>
+</div>
+
+<article>
+
+  <h2>Language modes</h2>
+
+  <p>This is a list of every mode in the distribution. Each mode lives
+in a subdirectory of the <code>mode/</code> directory, and typically
+defines a single JavaScript file that implements the mode. Loading
+such file will make the language available to CodeMirror, through
+the <a href="../doc/manual.html#option_mode"><code>mode</code></a>
+option.</p>
+
+  <div style="-webkit-columns: 100px 2; -moz-columns: 100px 2; columns: 100px 2;">
+    <ul style="margin-top: 0">
+      <li><a href="apl<?php echo PATH ?>">APL</a></li>
+      <li><a href="asn.1<?php echo PATH ?>">ASN.1</a></li>
+      <li><a href="asterisk<?php echo PATH ?>">Asterisk dialplan</a></li>
+      <li><a href="brainfuck<?php echo PATH ?>">Brainfuck</a></li>
+      <li><a href="clike<?php echo PATH ?>">C, C++, C#</a></li>
+      <li><a href="clike<?php echo PATH ?>">Ceylon</a></li>
+      <li><a href="clojure<?php echo PATH ?>">Clojure</a></li>
+      <li><a href="css/gss.html">Closure Stylesheets (GSS)</a></li>
+      <li><a href="cmake<?php echo PATH ?>">CMake</a></li>
+      <li><a href="cobol<?php echo PATH ?>">COBOL</a></li>
+      <li><a href="coffeescript<?php echo PATH ?>">CoffeeScript</a></li>
+      <li><a href="commonlisp<?php echo PATH ?>">Common Lisp</a></li>
+      <li><a href="crystal<?php echo PATH ?>">Crystal</a></li>
+      <li><a href="css<?php echo PATH ?>">CSS</a></li>
+      <li><a href="cypher<?php echo PATH ?>">Cypher</a></li>
+      <li><a href="python<?php echo PATH ?>">Cython</a></li>
+      <li><a href="d<?php echo PATH ?>">D</a></li>
+      <li><a href="dart<?php echo PATH ?>">Dart</a></li>
+      <li><a href="django<?php echo PATH ?>">Django</a> (templating language)</li>
+      <li><a href="dockerfile<?php echo PATH ?>">Dockerfile</a></li>
+      <li><a href="diff<?php echo PATH ?>">diff</a></li>
+      <li><a href="dtd<?php echo PATH ?>">DTD</a></li>
+      <li><a href="dylan<?php echo PATH ?>">Dylan</a></li>
+      <li><a href="ebnf<?php echo PATH ?>">EBNF</a></li>
+      <li><a href="ecl<?php echo PATH ?>">ECL</a></li>
+      <li><a href="eiffel<?php echo PATH ?>">Eiffel</a></li>
+      <li><a href="https://github.com/optick/codemirror-mode-elixir">Elixir</a></li>
+      <li><a href="elm<?php echo PATH ?>">Elm</a></li>
+      <li><a href="erlang<?php echo PATH ?>">Erlang</a></li>
+      <li><a href="factor<?php echo PATH ?>">Factor</a></li>
+      <li><a href="fcl<?php echo PATH ?>">FCL</a></li>
+      <li><a href="forth<?php echo PATH ?>">Forth</a></li>
+      <li><a href="fortran<?php echo PATH ?>">Fortran</a></li>
+      <li><a href="mllike<?php echo PATH ?>">F#</a></li>
+      <li><a href="gas<?php echo PATH ?>">Gas</a> (AT&amp;T-style assembly)</li>
+      <li><a href="gherkin<?php echo PATH ?>">Gherkin</a></li>
+      <li><a href="go<?php echo PATH ?>">Go</a></li>
+      <li><a href="groovy<?php echo PATH ?>">Groovy</a></li>
+      <li><a href="haml<?php echo PATH ?>">HAML</a></li>
+      <li><a href="handlebars<?php echo PATH ?>">Handlebars</a></li>
+      <li><a href="haskell<?php echo PATH ?>">Haskell</a> (<a href="haskell-literate<?php echo PATH ?>">Literate</a>)</li>
+      <li><a href="haxe<?php echo PATH ?>">Haxe</a></li>
+      <li><a href="htmlembedded<?php echo PATH ?>">HTML embedded</a> (JSP, ASP.NET)</li>
+      <li><a href="htmlmixed<?php echo PATH ?>">HTML mixed-mode</a></li>
+      <li><a href="http<?php echo PATH ?>">HTTP</a></li>
+      <li><a href="idl<?php echo PATH ?>">IDL</a></li>
+      <li><a href="clike<?php echo PATH ?>">Java</a></li>
+      <li><a href="javascript<?php echo PATH ?>">JavaScript</a> (<a href="jsx<?php echo PATH ?>">JSX</a>)</li>
+      <li><a href="jinja2<?php echo PATH ?>">Jinja2</a></li>
+      <li><a href="julia<?php echo PATH ?>">Julia</a></li>
+      <li><a href="kotlin<?php echo PATH ?>">Kotlin</a></li>
+      <li><a href="css/less.html">LESS</a></li>
+      <li><a href="livescript<?php echo PATH ?>">LiveScript</a></li>
+      <li><a href="lua<?php echo PATH ?>">Lua</a></li>
+      <li><a href="markdown<?php echo PATH ?>">Markdown</a> (<a href="gfm<?php echo PATH ?>">GitHub-flavour</a>)</li>
+      <li><a href="mathematica<?php echo PATH ?>">Mathematica</a></li>
+      <li><a href="mbox<?php echo PATH ?>">mbox</a></li>
+      <li><a href="mirc<?php echo PATH ?>">mIRC</a></li>
+      <li><a href="modelica<?php echo PATH ?>">Modelica</a></li>
+      <li><a href="mscgen<?php echo PATH ?>">MscGen</a></li>
+      <li><a href="mumps<?php echo PATH ?>">MUMPS</a></li>
+      <li><a href="nginx<?php echo PATH ?>">Nginx</a></li>
+      <li><a href="nsis<?php echo PATH ?>">NSIS</a></li>
+      <li><a href="ntriples<?php echo PATH ?>">N-Triples/N-Quads</a></li>
+      <li><a href="clike<?php echo PATH ?>">Objective C</a></li>
+      <li><a href="mllike<?php echo PATH ?>">OCaml</a></li>
+      <li><a href="octave<?php echo PATH ?>">Octave</a> (MATLAB)</li>
+      <li><a href="oz<?php echo PATH ?>">Oz</a></li>
+      <li><a href="pascal<?php echo PATH ?>">Pascal</a></li>
+      <li><a href="pegjs<?php echo PATH ?>">PEG.js</a></li>
+      <li><a href="perl<?php echo PATH ?>">Perl</a></li>
+      <li><a href="asciiarmor<?php echo PATH ?>">PGP (ASCII armor)</a></li>
+      <li><a href="php<?php echo PATH ?>">PHP</a></li>
+      <li><a href="pig<?php echo PATH ?>">Pig Latin</a></li>
+      <li><a href="powershell<?php echo PATH ?>">PowerShell</a></li>
+      <li><a href="properties<?php echo PATH ?>">Properties files</a></li>
+      <li><a href="protobuf<?php echo PATH ?>">ProtoBuf</a></li>
+      <li><a href="pug<?php echo PATH ?>">Pug</a></li>
+      <li><a href="puppet<?php echo PATH ?>">Puppet</a></li>
+      <li><a href="python<?php echo PATH ?>">Python</a></li>
+      <li><a href="q<?php echo PATH ?>">Q</a></li>
+      <li><a href="r<?php echo PATH ?>">R</a></li>
+      <li><a href="rpm<?php echo PATH ?>">RPM</a></li>
+      <li><a href="rst<?php echo PATH ?>">reStructuredText</a></li>
+      <li><a href="ruby<?php echo PATH ?>">Ruby</a></li>
+      <li><a href="rust<?php echo PATH ?>">Rust</a></li>
+      <li><a href="sas<?php echo PATH ?>">SAS</a></li>
+      <li><a href="sass<?php echo PATH ?>">Sass</a></li>
+      <li><a href="spreadsheet<?php echo PATH ?>">Spreadsheet</a></li>
+      <li><a href="clike/scala.html">Scala</a></li>
+      <li><a href="scheme<?php echo PATH ?>">Scheme</a></li>
+      <li><a href="css/scss.html">SCSS</a></li>
+      <li><a href="shell<?php echo PATH ?>">Shell</a></li>
+      <li><a href="sieve<?php echo PATH ?>">Sieve</a></li>
+      <li><a href="slim<?php echo PATH ?>">Slim</a></li>
+      <li><a href="smalltalk<?php echo PATH ?>">Smalltalk</a></li>
+      <li><a href="smarty<?php echo PATH ?>">Smarty</a></li>
+      <li><a href="solr<?php echo PATH ?>">Solr</a></li>
+      <li><a href="soy<?php echo PATH ?>">Soy</a></li>
+      <li><a href="stylus<?php echo PATH ?>">Stylus</a></li>
+      <li><a href="sql<?php echo PATH ?>">SQL</a> (several dialects)</li>
+      <li><a href="sparql<?php echo PATH ?>">SPARQL</a></li>
+      <li><a href="clike<?php echo PATH ?>">Squirrel</a></li>
+      <li><a href="swift<?php echo PATH ?>">Swift</a></li>
+      <li><a href="stex<?php echo PATH ?>">sTeX, LaTeX</a></li>
+      <li><a href="tcl<?php echo PATH ?>">Tcl</a></li>
+      <li><a href="textile<?php echo PATH ?>">Textile</a></li>
+      <li><a href="tiddlywiki<?php echo PATH ?>">Tiddlywiki</a></li>
+      <li><a href="tiki<?php echo PATH ?>">Tiki wiki</a></li>
+      <li><a href="toml<?php echo PATH ?>">TOML</a></li>
+      <li><a href="tornado<?php echo PATH ?>">Tornado</a> (templating language)</li>
+      <li><a href="troff<?php echo PATH ?>">troff</a> (for manpages)</li>
+      <li><a href="ttcn<?php echo PATH ?>">TTCN</a></li>
+      <li><a href="ttcn-cfg<?php echo PATH ?>">TTCN Configuration</a></li>
+      <li><a href="turtle<?php echo PATH ?>">Turtle</a></li>
+      <li><a href="twig<?php echo PATH ?>">Twig</a></li>
+      <li><a href="vb<?php echo PATH ?>">VB.NET</a></li>
+      <li><a href="vbscript<?php echo PATH ?>">VBScript</a></li>
+      <li><a href="velocity<?php echo PATH ?>">Velocity</a></li>
+      <li><a href="verilog<?php echo PATH ?>">Verilog/SystemVerilog</a></li>
+      <li><a href="vhdl<?php echo PATH ?>">VHDL</a></li>
+      <li><a href="vue<?php echo PATH ?>">Vue.js app</a></li>
+      <li><a href="webidl<?php echo PATH ?>">Web IDL</a></li>
+      <li><a href="xml<?php echo PATH ?>">XML/HTML</a></li>
+      <li><a href="xquery<?php echo PATH ?>">XQuery</a></li>
+      <li><a href="yacas<?php echo PATH ?>">Yacas</a></li>
+      <li><a href="yaml<?php echo PATH ?>">YAML</a></li>
+      <li><a href="yaml-frontmatter<?php echo PATH ?>">YAML frontmatter</a></li>
+      <li><a href="z80<?php echo PATH ?>">Z80</a></li>
+    </ul>
+  </div>
+
+</article>
