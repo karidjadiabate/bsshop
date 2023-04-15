@@ -128,13 +128,13 @@ $intituleCommande = $orders_info[0]["users_id"] . ' ' . $orders_info[0]["DateCom
 $html = '<style>
 table > th {
   border-collapse:collapse;
-  border : 1px solid #84ADEA;
-  background-color: #84ADEA;
+  border : 1px solid #f15f79;
+  background-color: #f15f79;
   color: white;
   border-radius:5px
 }
 hr{
-  color:#84ADEA;
+  color:#f15f79;
 }
 body{
   background-color:#E5E9E9;

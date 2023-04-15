@@ -77,7 +77,7 @@
                                             <div class="product-price-variant">
                                                 <span class="price current-price text-black">F CFA <?php echo $val['valeur']; ?></span>
                                             </div>
-                                            <h5 class="title"><a href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>"><?php echo strtoupper($val['nomDuProduit']) ?><span class="verified-icon"><i class="fas fa-badge-check" style="color:#84ADEA"></i></span></a></h5>
+                                            <h5 class="title"><a href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>"><?php echo strtoupper($val['nomDuProduit']) ?><span class="verified-icon"><i class="fas fa-badge-check" style="color:#f15f79"></i></span></a></h5>
                                             <div class="product-hover-action ">
                                                 <ul class="cart-action">
                                                     <li class="select-option"><a class="btn-outline-dark" href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>">Acheter</a></li>

@@ -1,6 +1,6 @@
 <?php
 ?>
- <div class="col-md-8">
+ <div class="col-md-8"id='commandeTable'>
                             <div class="axil-order-summery order-checkout-summery">
                                 <h5 class="title mb--20">Votre Commande</h5>
                                 <div class="summery-table-wrap">
@@ -105,17 +105,18 @@
                                     </div>
                                    
                                 </div>
-                                <button type="submit" name="process" value="<?php if (isset($connected) && $connected != array()) {
+                                <button type="submit" id="imprimerCommande" name="process" value="<?php if (isset($connected) && $connected != array()) {
                                                                                 echo "ConnectedProcess";
                                                                             } else {
                                                                                 echo "process";
-                                                                            } ?>" class="axil-btn checkout-btn text-white" style="background-color:#84ADEA">Imprimer le bon de commande</button>
-                                <div class="row">
+                                                                            } ?>" class="axil-btn checkout-btn text-white d-none" style="background-color:#f15f79">Imprimer le bon de commande</button>
+                               <button type='button' id="validerCommande" onclick="ValiderCommande()" class="axil-btn checkout-btn text-white mt-2" style="background-color:#35FF7D">Valider la commande</button>
+                               <div class="row">
                                     <div class="col-6 mt-3">
-                                        <button type="button" onclick="annulerCommande()" class="axil-btn bg-danger checkout-btn text-white">Annuler la commande</button>
+                                        <button type="button" id="annulerCommande" onclick="annulerCommande()" class="axil-btn bg-danger checkout-btn text-white">Annuler la commande</button>
                                     </div>
                                     <div class="col-6 mt-3">
-                                        <a href="index.php" class="axil-btn bg-secondary checkout-btn text-white">Continuez vos achats</a>
+                                        <a href="index.php" id="continuerAchat" class="axil-btn bg-secondary checkout-btn text-white">Continuez vos achats</a>
                                     </div>
                                 </div>
                                 </form>

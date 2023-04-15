@@ -81,7 +81,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
                           
                             <li class="shopping-cart">
                                 <a href="#" class="cart-dropdown-btn">
-                                    <span class="cart-count " style="background-color:#84ADEA !important"></span>
+                                    <span class="cart-count " style="background-color:#f15f79 !important"></span>
                                     <i class="flaticon-shopping-cart"></i>
                                 </a>
                             </li>
@@ -100,7 +100,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
                                         <?php if (isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] != array()) { ?>
                                             <a href="deconnexion.php" class="axil-btn btn-danger ">Se deconnecter</a>
                                         <?php } else { ?>
-                                            <a href="sign-in.php" class="axil-btn text-white" style="background-color:#84ADEA">Se connecter</a>
+                                            <a href="sign-in.php" class="axil-btn text-white" style="background-color:#f15f79">Se connecter</a>
                                         <?php } ?>
                                     </div>
                                     <?php if (!isset($_SESSION["userYopciConnected"]) || isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] == array()) { ?>
@@ -183,7 +183,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
         <div class="axil-best-seller-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
             <div class="container">
                 <div class="section-title-wrapper">
-                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket " style="background-color:#84ADEA"></i> <span class="text-dark">Meilleures ventes</span></span>
+                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket " style="background-color:#f15f79"></i> <span class="text-dark">Meilleures ventes</span></span>
                     <h2 class="title">Les articles les mieux vendus</h2>
                 </div>
 
@@ -229,7 +229,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
         <div class="axil-product-area bg-color-white axil-section-gap">
             <div class="container">
                 <div class="section-title-wrapper">
-                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#84ADEA"></i> <span class="text-dark">Nos Produits</span></span>
+                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#f15f79"></i> <span class="text-dark">Nos Produits</span></span>
                     <h2 class="title">Explorer Tous nos Produits</h2>
                 </div>
                 <div class="explore-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide">
@@ -350,7 +350,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
                         <div class="slick-single-layout">
                             <div class="categrie-product" data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500">
                                 <a href="shop.php?categories=<?php echo $val['id'] ?>">
-                                    <img class="img-fluid" style="border:1px solid #84ADEA;border-radius:5px;width:50px;height:50px" src="backoffice/images/categories/<?php echo $imagesN[0]['name'] ?>" alt="Categories Images">
+                                    <img class="img-fluid" style="border:1px solid #f15f79;border-radius:5px;width:50px;height:50px" src="backoffice/images/categories/<?php echo $imagesN[0]['name'] ?>" alt="Categories Images">
                                     <h6 class="cat-title"><?php echo ucfirst(strtolower($val['name'])) ?></h6>
                                 </a>
                             </div>
@@ -368,7 +368,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
         <div class="axil-new-arrivals-product-area bg-color-white axil-section-gap pb--50">
             <div class="container">
                 <div class="section-title-wrapper">
-                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#84ADEA"></i> <span class="text-dark">Cette semaine</span></span>
+                    <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#f15f79"></i> <span class="text-dark">Cette semaine</span></span>
 
                     <h2 class="title">Produits Ajoutés Récemment</h2>
                 </div>
@@ -430,7 +430,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
                 <div class="etrade-newsletter-wrapper bg_image bg_image--12">
                     <form method="POST">
                         <div class="newsletter-content">
-                            <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open text-white" style="background-color:#84ADEA"></i><span class="text-white">Newsletter</span> </span>
+                            <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open text-white" style="background-color:#f15f79"></i><span class="text-white">Newsletter</span> </span>
                             <h2 class="title mb--40 mb_sm--30 text-white">Nous aimerions avoir de vos nouvelles.</h2>
                             <p class="title mb--40 mb_sm--30 text-white " style="font-size:16px">Si vous avez d’excellents produits que vous fabriquez ou <br>si vous cherchez à travailler avec nous, envoyez-nous un message.</hp>
                             <div class="input-group newsletter-form">
@@ -440,7 +440,7 @@ if (isset($_REQUEST['orders_id']) && $_REQUEST['orders_id'] != "") {
                                 <div class="position-relative shop-inner mb--15">
                                     <input placeholder="saisissez votre message" name='messageTosend' type="text" required>
                                 </div>
-                                <button type="submit" name="envoyer" value="envoyer" class="mb--15" style="background-color:#84ADEA">Envoyer</button>
+                                <button type="submit" name="envoyer" value="envoyer" class="mb--15" style="background-color:#f15f79">Envoyer</button>
                             </div>
                         </div>
                     </form>

@@ -316,7 +316,7 @@ if (mixedChart1 !== null) {
       },
     },
     // colors: ["#9e6de0", "#faafca", "#f2e052"],
-    colors: ["#84ADEA"],
+    colors: ["#f15f79"],
     legend: {
       show: true,
       position: "top",
@@ -456,7 +456,7 @@ if (radialBarChart1 !== null) {
     },
     fill: {
       type: "solid",
-      colors: "#84ADEA",
+      colors: "#f15f79",
     },
     series: [70],
     labels: ["Yearly Revenue"],

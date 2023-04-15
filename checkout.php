@@ -96,6 +96,7 @@ if (isset($_SESSION['InfoProduct']) && count($_SESSION['InfoProduct']) != 0) {
                     $insert3 = $db->insert('orders_details', $data3);
                 }
                 if ($insert3) {
+                    unset($_SESSION['InfoProduct']) ;
                     header('location:index.php?orders_id=' . $orders_id . '&ampmsg=cmdok');
                    
                 }
@@ -124,7 +125,7 @@ if (isset($_SESSION['InfoProduct']) && count($_SESSION['InfoProduct']) != 0) {
                 <div class="ml-1">
 
                     <div class="row" style="padding-left:5px;padding-right:5px">
-                        <div class="col-md-4">
+                        <div class="col-md-4"id='CheckOutForm'>
                             <div class="axil-checkout-notice">
                                
                                 <!-- <?php if (isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] != array()) { ?>
@@ -156,13 +157,51 @@ if (isset($_SESSION['InfoProduct']) && count($_SESSION['InfoProduct']) != 0) {
                     window.location = "http://localhost/bsshop/sign-in.php"
                 }
             });
-            coupon = $("#coupon").val();
-            if (coupon == "novalid") {
-                $("#errorcoupon").show();
-            } else {
-                $("#errorcoupon").hide();
-
+     
+            if( $("#CheckOutForm").hasClass('col-md-4') && $("#commandeTable").hasClass('col-md-8')){
+            $("#CheckOutForm").hide();
+                $("#commandeTable").removeClass('col-md-8')
+                $("#commandeTable").addClass('col-md-12')
             }
+            
+            function ValiderCommande() {
+    swal({
+        title: "Confirmation",
+        text: "Etes-vous sûr de valider cette commande  ?",
+        icon: "warning",
+        buttons: ["Non, pas encore", "Oui, je confirme"],
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                if( $("#commandeTable").hasClass('col-md-12')){
+            $("#CheckOutForm").show();
+                $("#commandeTable").removeClass('col-md-12')
+                $("#imprimerCommande").removeClass('d-none')
+                $("#commandeTable").addClass('col-md-8')
+                $("#annulerCommande").addClass('d-none')
+                $("#continuerAchat").addClass('d-none')
+                $("#validerCommande").addClass('d-none')
+                
+                swal({
+        title: "Commande Valide",
+        text: "Votre Commande a été validée avec succès",
+        icon: "success",
+       
+    });    
+        }
+            } else {
+                swal({
+                    title: "Alerte !",
+                    text: "Operation de Validation non confirmée!",
+                    icon: "warning",
+                    confirmButtonText: "OK"
+                });
+            }
+        });
+
+}
+            
         </script>
     </body>
     <!-- Mirrored from new.axilthemes.com/demo/template/etrade/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Oct 2022 22:16:36 GMT -->

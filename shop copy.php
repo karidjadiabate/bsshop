@@ -1,5 +1,5 @@
 <?php 
-// var_dump($_REQUEST['prod-search']);exit;
+
 include('assets/database/config.php');
 $allCategories = $db->getAllRecords('categories', '*', "AND statut='1'", 'ORDER BY name ASC');
 $allPrice = $db->getAllRecords('prix', '*', "AND statut='1'", 'ORDER BY valeur ASC');
@@ -11,8 +11,6 @@ if (isset($_REQUEST['categories']) && $_REQUEST['categories'] != "" && $_REQUEST
 if (isset($_REQUEST['prod-search']) && $_REQUEST['prod-search'] != "" && $_REQUEST['prod-search'] != "all") {
     $condition .= "AND products.name like '%" . $_REQUEST['prod-search'] . "%'";
 }
-
-     
 if (isset($_REQUEST['intValPrice']) && $_REQUEST['intValPrice'] != "" && $_REQUEST['intValPrice'] != "Tous") {
     $_REQUEST['intValPrices'] = explode(" - ", $_REQUEST['intValPrice']);
     // var_dump($_REQUEST['intValPrice']);exit;
@@ -21,7 +19,6 @@ if (isset($_REQUEST['intValPrice']) && $_REQUEST['intValPrice'] != "" && $_REQUE
 $condition .= "AND images.statut='1'";
 
 if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'search') {
-    // var_dump($condition); exit;
     $allProducts = $db->getAllRecords3('products', 'images', 'prix', '*,products.id as idDuProduit,products.statut as statutDuProduit,products.name as nomDuProduit,images.name as imageDuProduit', 'products.id', 'product_id', 'prix.id', 'products.price', $condition, 'ORDER BY products.name ASC LIMIT 40');
 } else if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'search2') {
     $allProducts = $db->getAllRecords3('products', 'images', 'prix', '*,products.id as idDuProduit,products.statut as statutDuProduit,products.name as nomDuProduit,images.name as imageDuProduit', 'products.id', 'product_id', 'prix.id', 'products.price', $condition, 'ORDER BY products.name ASC LIMIT 80');
@@ -159,7 +156,7 @@ define('MENU', 'SHOP');
                                         <div class="product-hover-action">
                                             <ul class="cart-action">
                                                
-                                                <li class="select-option "><a  href="#" onclick="AddToCart('<?php echo $val['idDuProduit']; ?>')">Ajouter au panier</a></li>
+                                                <li class="select-option "><a href="#" onclick="AddToCart('<?php echo $val['idDuProduit']; ?>')">Ajouter au panier</a></li>
                                                 <!-- <li class="quickview"><a href="#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li> -->
                                             </ul>
                                         </div>
@@ -201,12 +198,12 @@ define('MENU', 'SHOP');
                 <div class="text-center pt--30">
                     <?php if (count($allProducts) > 0) {
                         if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'search2') { ?>
-                           <a href="#" onclick='Retour()'class="axil-btn btn-bg-lighter btn-load-more">Charger moins</a>
+                            <a href="<?php echo $_SERVER['PHP_SELF'] ?>" class="axil-btn btn-bg-lighter btn-load-more">Charger moins</a>
                             <?php } else {
                             if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'search') {  ?>
-                                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?search=search2&prod-search=<?php echo (isset($_REQUEST['prod-search']) && $_REQUEST['prod-search']!="")? $_REQUEST['prod-search']:'' ?>" class="axil-btn btn-bg-lighter btn-load-more">Charger plus</a>
+                                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?search=search2" class="axil-btn btn-bg-lighter btn-load-more">Charger plus</a>
                             <?php } else { ?>
-                                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?search=search&prod-search=<?php echo (isset($_REQUEST['prod-search']) && $_REQUEST['prod-search']!="")? $_REQUEST['prod-search']:'' ?>" class="axil-btn btn-bg-lighter btn-load-more">Charger plus</a>
+                                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?search=search" class="axil-btn btn-bg-lighter btn-load-more">Charger plus</a>
 
                     <?php }
                         }
@@ -260,8 +257,7 @@ define('MENU', 'SHOP');
 ============================================ -->
     <!-- ajax and swal2 script -->
     <script type="text/javascript" src="backoffice/js/jqueryAjax.min.js"></script>
-    
-    <?php include("script.php"); ?>
+   <?php include("script.php"); ?>
 
 </body>
 

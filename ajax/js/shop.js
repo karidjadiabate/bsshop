@@ -110,6 +110,7 @@ function annulerCommande() {
         });
 
 }
+
 function AddToCart(id) {
 
     $.ajax({
@@ -124,13 +125,7 @@ function AddToCart(id) {
             $("#cart-dropdown").html(data)
             total = $("#countProducts").val();
             $(".cart-count").text(total);
-            // swal({
-            //     title: "Validé!",
-            //     text: "Article ajouté au panier!",
-            //     icon: "success",
-            //     confirmButtonText: "OK"
-            // });
-            // Set the options that I want 
+            
              toastr.success("Article ajouté au panier!","validé!!!");
         }
     });

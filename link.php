@@ -28,4 +28,3 @@
     <script type="text/javascript" src="backoffice/js/swal2.min.js"></script>
 </head>
 
-</html>

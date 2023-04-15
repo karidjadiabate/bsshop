@@ -348,7 +348,7 @@ if (isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] !=
                     <div class="etrade-newsletter-wrapper bg_image bg_image--12">
                         <form method="POST">
                             <div class="newsletter-content">
-                                <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open text-white" style="background-color:#84ADEA"></i><span class="text-white">Newsletter</span> </span>
+                                <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open text-white" style="background-color:#f15f79"></i><span class="text-white">Newsletter</span> </span>
                                 <h2 class="title mb--40 mb_sm--30 text-white">Nous aimerions avoir de vos nouvelles.</h2>
                                 <p class="title mb--40 mb_sm--30 text-white " style="font-size:16px">Si vous avez d’excellents produits que vous fabriquez ou <br>si vous cherchez à travailler avec nous, envoyez-nous un message.</hp>
                                 <div class="input-group newsletter-form">
@@ -358,7 +358,7 @@ if (isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] !=
                                     <div class="position-relative shop-inner mb--15">
                                         <input placeholder="saisissez votre message" name='messageTosend' type="text" required>
                                     </div>
-                                    <button type="submit" name="envoyer" value="envoyer" class="mb--15" style="background-color:#84ADEA">Envoyer</button>
+                                    <button type="submit" name="envoyer" value="envoyer" class="mb--15" style="background-color:#f15f79">Envoyer</button>
                                 </div>
                             </div>
                         </form>

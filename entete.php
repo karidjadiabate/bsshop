@@ -7,7 +7,7 @@
                                 <div class="slider-activation-one axil-slick-dots">
                                     <div class="single-slide slick-slide">
                                         <div class="main-slider-content ">
-                                            <span class="subtitle text-black"><i class="fas fa-home " style="background-color:#84ADEA"></i>Quoi de mieux qu'une commande rapide</span>
+                                            <span class="subtitle text-black"><i class="fas fa-home " style="background-color:#f15f79"></i>Quoi de mieux qu'une commande rapide</span>
                                             <h2 class="title">Pinso Market vous souhaite la bienvenue</h2>
                                             <div class="shop-btn">
                                                 <a href="shop.php" class="axil-btn">Acheter maintenant <i class="fal fa-long-arrow-right"></i></a>
@@ -19,7 +19,7 @@
                                     </div>
                                     <div class="single-slide slick-slide">
                                         <div class="main-slider-content">
-                                            <span class="subtitle text-black"><i class="fas fa-check " style="background-color:#84ADEA"></i>Nos produits sont de haute qualité</span>
+                                            <span class="subtitle text-black"><i class="fas fa-check " style="background-color:#f15f79"></i>Nos produits sont de haute qualité</span>
                                             <h1 class="title">Nos Produits Vous Satisfairont à Coup Sûr</h1>
                                             <div class="shop-btn">
                                                 <a href="shop.php" class="axil-btn">Acheter maintenant <i class="fal fa-long-arrow-right"></i></a>
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="single-slide slick-slide">
                                         <div class="main-slider-content">
-                                            <span class="subtitle text-black"><i class="fas fa-truck " style="background-color:#84ADEA"></i>Nos Produits sont livrés dans les plus brefs délais</span>
+                                            <span class="subtitle text-black"><i class="fas fa-truck " style="background-color:#f15f79"></i>Nos Produits sont livrés dans les plus brefs délais</span>
                                             <h1 class="title">Livraison Instantanée et Approuvée</h1>
                                             <div class="shop-btn">
                                                 <a href="shop.php" class="axil-btn">Acheter maintenant <i class="fal fa-long-arrow-right"></i></a>
@@ -103,7 +103,7 @@
             <div class="container ml--xxl-0">
                 <div class="product-area pb--50">
                     <div class="section-title-wrapper">
-                        <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#84ADEA"></i> <span class="text-dark">Cette semaine</span></span>
+                        <span class="title-highlighter text-white"><i class="far fa-shopping-basket" style="background-color:#f15f79"></i> <span class="text-dark">Cette semaine</span></span>
                         <h2 class="title">Produits Ajoutés Récemment</h2>
                     </div>
                     <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
@@ -120,7 +120,7 @@
                                             <div class="product-price-variant">
                                                 <span class="price current-price text-black"><?php echo $val['valeur']; ?> F CFA</span>
                                             </div>
-                                            <h5 class="title"><a href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>"><?php echo strtoupper($val['nomDuProduit']) ?><span class="verified-icon"><i class="fas fa-badge-check " style="color:#84ADEA"></i></span></a></h5>
+                                            <h5 class="title"><a href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>"><?php echo strtoupper($val['nomDuProduit']) ?><span class="verified-icon"><i class="fas fa-badge-check " style="color:#f15f79"></i></span></a></h5>
                                             <div class="product-hover-action">
                                                 <ul class="cart-action">
                                                     <li class="select-option"><a href="single-product.php?product_id=<?php echo $val['idDuProduit'] ?>">Acheter</a></li>

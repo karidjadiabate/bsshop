@@ -12,10 +12,7 @@ $allProfil = $db->getAllRecords('profil', '*', $condition, 'ORDER BY profil ASC'
 
 $error = '';
 $sessionPages = json_decode($_SESSION['userYopci']['sessionPages']);
-if (!in_array('admin.user', $sessionPages)) {
-  //header('location: '.PATH.'pagenonautorisee.php');
-  //exit;
-}
+
 // script pour ajouter
 $cpt = 0;
 $cpt1 = 0;

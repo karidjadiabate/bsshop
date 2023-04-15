@@ -104,7 +104,7 @@ if (isset($_SESSION['InfoProduct'])) {
             <span class="subtotal-amount">F CFA <?php echo $total ?></span>
         </h3>
         <div class="group-btn">
-            <a href="cart.php" class="axil-btn text-white viewcart-btn"style="background-color:#84ADEA">Voir le Panier</a>
+            <a href="cart.php" class="axil-btn text-white viewcart-btn"style="background-color:#f15f79">Voir le Panier</a>
             <a href="checkout.php" class="axil-btn btn-bg-secondary checkout-btn">Commander</a>
         </div>
     </div>

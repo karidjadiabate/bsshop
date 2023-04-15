@@ -60,41 +60,41 @@ class Database{
      * @param  array      $arrParams
      * @return array|bool
      */
-    public function __call($function, array $params = array())
-    {
-        if (! preg_match('/^(get|update|insert|delete)(.*)$/', $function, $matches)) {
-            throw new \BadMethodCallException($function.' is an invalid method Call');
-        }
+    // public function __call($function, array $params = array())
+    // {
+    //     if (! preg_match('/^(get|update|insert|delete)(.*)$/', $function, $matches)) {
+    //         throw new \BadMethodCallException($function.' is an invalid method Call');
+    //     }
  
-        if ('insert' == $matches[1]) {
-            if (! is_array($params[0]) || count($params[0]) < 1) {
-                throw new \InvalidArgumentException('insert values must be an array');
-            }
-            return $this->insert($this->camelCaseToUnderscore($matches[2]), $params[0]);
-        }
+    //     if ('insert' == $matches[1]) {
+    //         if (! is_array($params[0]) || count($params[0]) < 1) {
+    //             throw new \InvalidArgumentException('insert values must be an array');
+    //         }
+    //         return $this->insert($this->camelCaseToUnderscore($matches[2]), $params[0]);
+    //     }
  
-        list($tableName, $fieldName) = explode('By', $matches[2], 2);
-        if (! isset($tableName, $fieldName)) {
-            throw new \BadMethodCallException($function.' is an invalid method Call');
-        }
+    //     list($tableName, $fieldName) = explode('By', $matches[2], 2);
+    //     if (! isset($tableName, $fieldName)) {
+    //         throw new \BadMethodCallException($function.' is an invalid method Call');
+    //     }
          
-        if ('update' == $matches[1]) {
-            if (! is_array($params[1]) || count($params[1]) < 1) {
-                throw new \InvalidArgumentException('update fields must be an array');
-            }
-            return $this->update(
-                $this->camelCaseToUnderscore($tableName),
-                $params[1],
-                array($this->camelCaseToUnderscore($fieldName) => $params[0])
-            );
-        }
+    //     if ('update' == $matches[1]) {
+    //         if (! is_array($params[1]) || count($params[1]) < 1) {
+    //             throw new \InvalidArgumentException('update fields must be an array');
+    //         }
+    //         return $this->update(
+    //             $this->camelCaseToUnderscore($tableName),
+    //             $params[1],
+    //             array($this->camelCaseToUnderscore($fieldName) => $params[0])
+    //         );
+    //     }
  
-        //select and delete method
-        return $this->{$matches[1]}(
-            $this->camelCaseToUnderscore($tableName),
-            array($this->camelCaseToUnderscore($fieldName) => $params[0])
-        );
-    }
+    //     //select and delete method
+    //     return $this->{$matches[1]}(
+    //         $this->camelCaseToUnderscore($tableName),
+    //         array($this->camelCaseToUnderscore($fieldName) => $params[0])
+    //     );
+    // }
  
     /**
      * Record retrieval method
@@ -139,7 +139,8 @@ class Database{
             throw new \RuntimeException("[".$e->getCode()."] : ". $e->getMessage());
         }
     }
-     
+    //  recuperer les info d'une table donnée 
+     //la fonction getallrecord recupere le nom , le champ,la condition, lordre et limit
     public function getAllRecords($tableName, $fields='*', $cond='', $orderBy='', $limit='')
     {
         $stmt = $this->pdo->prepare("SELECT $fields FROM $tableName WHERE 1 ".$cond." ".$orderBy." ".$limit);
@@ -305,33 +306,33 @@ class Database{
      * @param  Int make id
      * @param  Int name id 
      */
-    public function getModelMake($makeID,$nameID){
-        $vehMakeData    =   self::getRecFrmQry('SELECT veh_make_id,veh_make_name FROM tb_vehicle_make WHERE veh_make_id="'.$makeID.'"');
-        $vehNameData    =   self::getRecFrmQry('SELECT veh_name_id,veh_name FROM tb_vehicle_name WHERE veh_name_id="'.$nameID.'"');
-        return $vehMakeData[0]['veh_make_name'].' '.$vehNameData[0]['veh_name'];
-    }
+    // public function getModelMake($makeID,$nameID){
+    //     $vehMakeData    =   self::getRecFrmQry('SELECT veh_make_id,veh_make_name FROM tb_vehicle_make WHERE veh_make_id="'.$makeID.'"');
+    //     $vehNameData    =   self::getRecFrmQry('SELECT veh_name_id,veh_name FROM tb_vehicle_name WHERE veh_name_id="'.$nameID.'"');
+    //     return $vehMakeData[0]['veh_make_name'].' '.$vehNameData[0]['veh_name'];
+    // }
     /**
      * Cache Method
      *
      * @param  string QUERY
      * @param  Int Time default 0 set 
      */
-    public function getCache($sql,$cache_min=0) {
-      $f = 'cache/'.md5($sql);
-      if ( $cache_min!=0 and file_exists($f) and ( (time()-filemtime($f))/60 < $cache_min ) ) {
-        $arr = unserialize(file_get_contents($f));
-      }
-      else {
-        unlink($f);
-        $arr = self::getRecFrmQry($sql);
-        if ($cache_min!=0) {
-          $fp = fopen($f,'w');
-          fwrite($fp,serialize($arr));
-          fclose($fp);
-        }
-      }
-      return $arr;
-    }
+    // public function getCache($sql,$cache_min=0) {
+    //   $f = 'cache/'.md5($sql);
+    //   if ( $cache_min!=0 and file_exists($f) and ( (time()-filemtime($f))/60 < $cache_min ) ) {
+    //     $arr = unserialize(file_get_contents($f));
+    //   }
+    //   else {
+    //     unlink($f);
+    //     $arr = self::getRecFrmQry($sql);
+    //     if ($cache_min!=0) {
+    //       $fp = fopen($f,'w');
+    //       fwrite($fp,serialize($arr));
+    //       fclose($fp);
+    //     }
+    //   }
+    //   return $arr;
+    // }
    
      
 }

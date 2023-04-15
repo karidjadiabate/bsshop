@@ -18,11 +18,11 @@
                                             <a href="shop.php?categories=<?php echo $val['id'] ?>" class="nav-link">
                                                 <div class="row">
                                                     <div class="col-5">
-                                                        <span class="menu-icon"><img style="border:1px solid #84ADEA;border-radius:5px;width:50px;height:50px" src="backoffice/images/categories/<?php echo $imagesN[0]['name'] ?>" alt="Categories Images"></span>
+                                                        <span class="menu-icon"><img style="border:1px solid #f15f79;border-radius:5px;width:50px;height:50px" src="backoffice/images/categories/<?php echo $imagesN[0]['name'] ?>" alt="Categories Images"></span>
 
                                                     </div>
                                                     <div class="col-7">
-                                                        <span class="menu-text"><?php echo ucfirst(strtolower($val['name'])) ?></span>
+                                                        <span class="menu-text allcategorie" style="color:black!important " ><?php echo ucfirst(strtolower($val['name'])) ?></span>
 
                                                     </div>
                                                 </div>

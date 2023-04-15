@@ -217,7 +217,20 @@ if (isset($_REQUEST['product_id']) && $_REQUEST['product_id'] != "") {
 
                                                     <!-- Start Product Action  -->
                                                     <ul class="product-action d-flex-center mb--0">
-                                                        <li class="add-to-cart"><a onclick="AddToCartDetail(<?php echo $_REQUEST['product_id'] ?>)" class="axil-btn  text-white" style="background-color:#ffb347;cursor:pointer">Ajouter au panier</a></li>
+                                                        <li class="add-to-cart"> 
+                                                            <div class="row">
+                                                                <div class="col-1 mt-4 mr-2">
+                                                                <a href="#" class="btn btn-warning btn-lg"  onclick="Retour()">
+                                                <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                                </div>
+                                                                <div class="col-10 ml-2">
+                                                        <a onclick="AddToCartDetail(<?php echo $_REQUEST['product_id'] ?>)" class="axil-btn  text-white" style="background-color:#ffb347;cursor:pointer">Ajouter au panier</a>
+
+                                                                </div>
+                                                            </div>
+                                                            
+                                                    </li>
                                                       
                                                     </ul>
                                                     <!-- End Product Action  -->

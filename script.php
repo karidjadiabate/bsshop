@@ -19,7 +19,11 @@
     <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
     <script src="assets/js/vendor/counterup.js"></script>
     <script src="assets/js/vendor/waypoints.min.js"></script>
-
+    <script type="text/javascript" >
+   function Retour(){ 
+      history.go(-1)
+   }
+</script>
     <!-- Main JS -->
     <script src="ajax/js/shop.js"></script>
     <script src="assets/js/main.js"></script>

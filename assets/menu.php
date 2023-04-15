@@ -39,7 +39,7 @@ $allCategories = $db->getAllRecords('categories', '*', "AND statut='1'", 'ORDER 
                                                 <?php $images = $db->getAllRecords('images_category', 'id,name', 'AND category_id="' . $val['id'] . '"', '', '') ?>
                                                 <div class="row">
                                                     <div class="col-4">
-                                                        <img style="border:1px solid #84ADEA;border-radius:5px;width:50px;height:50px" src="<?php echo PATH ?>backoffice/images/categories/<?php echo $images[0]['name'] ?>" alt="Site Logo"/>
+                                                        <img style="border:1px solid #f15f79;border-radius:5px;width:50px;height:50px" src="<?php echo PATH ?>backoffice/images/categories/<?php echo $images[0]['name'] ?>" alt="Site Logo"/>
                                                     </div>
                                                     <div class="col-8">
                                                         <?php echo ucfirst(strtolower($val['name'])) ?>
@@ -73,7 +73,7 @@ $allCategories = $db->getAllRecords('categories', '*', "AND statut='1'", 'ORDER 
                        
                         <li class="shopping-cart">
                             <a href="#" class="cart-dropdown-btn">
-                                <span class="cart-count "style="background-color:#84ADEA"></span>
+                                <span class="cart-count "style="background-color:#f15f79"></span>
                                 <i class="flaticon-shopping-cart"></i>
                             </a>
                         </li>
@@ -92,7 +92,7 @@ $allCategories = $db->getAllRecords('categories', '*', "AND statut='1'", 'ORDER 
                                         <?php if (isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] != array()) { ?>
                                             <a href="deconnexion.php" class="axil-btn btn-danger ">Se deconnecter</a>
                                         <?php } else { ?>
-                                            <a href="sign-in.php" class="axil-btn text-white"style="background-color:#84ADEA">Se connecter</a>
+                                            <a href="sign-in.php" class="axil-btn text-white"style="background-color:#f15f79">Se connecter</a>
                                         <?php } ?>
                                     </div>
                                     <?php if (!isset($_SESSION["userYopciConnected"]) || isset($_SESSION["userYopciConnected"]) && $_SESSION["userYopciConnected"] == array()) { ?>

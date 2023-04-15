@@ -217,7 +217,7 @@ if (isset($_REQUEST['valider']) and $_REQUEST['valider'] != "") {
               <?php if (isset($_REQUEST['msg']) and $_REQUEST['msg'] == "rds") {
                 echo '<script type="text/javascript">swal({ title: "Accepté !", text: "Enregistrement supprimé avec succès!", icon: "success", confirmButtonText: "OK" });</script>';
               } elseif (isset($_REQUEST['msg']) and $_REQUEST['msg'] == "rus") {
-                echo '<script type="text/javascript">swal({ title: "Accepté !", text: "Enregistrement modifié avec succès!", icon: "success", confirmButtonText: "OK" });</script>';
+                echo '<script type="text/javascript">swal({ title: "Accepté !", text: "Enregistrement ajouté avec succès!", icon: "success", confirmButtonText: "OK" });</script>';
               } elseif (isset($_REQUEST['msg']) and $_REQUEST['msg'] == "rnu") {
                 echo '<script type="text/javascript">swal({ title: "Alerte !", text: "Vous n\'avez rien changé!", icon: "warning", confirmButtonText: "OK" });</script>';
               } elseif (isset($_REQUEST['msg']) and $_REQUEST['msg'] == "rna") {

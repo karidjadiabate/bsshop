@@ -3,16 +3,12 @@ ini_set('memory_limit', '200M');
 
 require_once 'Database.php';
 define('SS_DB_NAME', 'bsshop');
-// define('SS_DB_USER', 'adebleza');
-// define('SS_DB_PASSWORD', 'ADeb@2020');
+
 define('SS_DB_USER', 'root');
 define('SS_DB_PASSWORD', '');
-// define('SS_DB_HOST', 'phpmyadmin2.origami-ci.com');
+
 define('SS_DB_HOST', 'localhost');
-// define('SS_DB_USER', 'pointage');
-// define('SS_DB_PASSWORD', 'pointage@2022');
-// define('SS_DB_HOST', 'localhost');
-// define('PATH', "https://pointage.origami.ci/");
+
 define('PATH', "http://localhost/bsshop/");
 
 define('APP_NAME', "Pinso Market");

@@ -19,54 +19,7 @@ if (!in_array('admin.user', $sessionPages)) {
 $cpt = 0;
 $cpt1 = 0;
 $extensionupload = '';
-// if (isset($_REQUEST['valider']) and $_REQUEST['valider'] != "") {
-//   extract($_REQUEST);
 
-
-//   $checkCat  =   $db->getAllRecords('masse', '*', 'AND statut="1"');
-//   foreach ($checkCat as $key) {
-//     if (strtolower($key['libelle']) == strtolower($libelleI)) {
-//       $cpt += 1;
-//     }
-//   }
-//   $error = '';
-//   if ($cpt > 0) {
-//     header("location:masse.php?msg=exist");
-//     exit;
-//   } else {
-//     $data   =   array(
-//       'libelle' => $libelleI,
-//       'created_By' => $_SESSION['userYopci']['nom'] . "#" . $_SESSION['userYopci']['iduser'],
-//     );
-//     $insert =   $db->insert('masse', $data);
-//     if ($insert) {
-//         header('location:masse.php?msg=ras');
-//         exit;
-//       } else {
-//         header('location:masse.php?msg=rna');
-//         exit;
-//       }
-//   }
-// }
-// script pour modifier
-// if (isset($_REQUEST['update']) and $_REQUEST['update'] != "") {
-//   extract($_REQUEST);
-//   // var_dump($_REQUEST);exit;
-//   $data   =   array(
-//     'libelle' => $LibelleU,
-//     'updated_by' => $_SESSION['userYopci']['nom'] . "#" . $_SESSION['userYopci']['iduser'],
-//     'updated_at' =>  gmdate("Y-m-d H:i:s"),
-//   );
-//   $insert =   $db->update('masse', $data, array('id' => $category_Id));
-//   if ($insert) {
-
-//       header('location:masse.php?msg=rus');
-//       exit;
-//     } else {
-//       header('location:masse.php?msg=rnu');
-//       exit;
-//     }
-// }
 ?>
 
 <!DOCTYPE html>

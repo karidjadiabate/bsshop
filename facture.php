@@ -1,5 +1,4 @@
-<?php
-?>
+
 <form action="#" method="POST">
                                 <div class="axil-checkout-billing">
                                     <h4 class="title mb--40">Details de Facturation</h4>
